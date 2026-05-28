@@ -46,14 +46,6 @@ function Inicio() {
         </div>
 
      <div className="stack-icons">
-     <div className="icon-card">
-      <FaReact />
-    </div>
-
-    <div className="icon-card">
-      <FaLaravel />
-    </div>
-
     <div className="icon-card">
       <SiMysql />
     </div>
