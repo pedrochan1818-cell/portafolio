@@ -159,14 +159,18 @@
   ======================= */
   .mobile-menu {
     position: fixed;
-    top: 70px;            /* 👈 empieza debajo del navbar */
+    top: 75px;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: #070F2B;
+    width: 100%;
+    height: calc(100vh - 75px);
+  
+    background: rgba(11, 27, 85, 0.95);
+    backdrop-filter: blur(10px);
+  
     transform: translateX(100%);
     transition: transform 0.4s ease;
     z-index: 1500;
+  
     padding: 40px 32px;
   }
   
@@ -228,43 +232,7 @@
     overflow: hidden;
     height: 100vh;
   }
-  
-  .login-btn {
-    background: #ffffff;
-    color: #070f2B !important;   /* ← ESTO ES CLAVE */
-    padding: 8px 18px;
-    border-radius: 20px;
-    font-weight: 600;
-    text-decoration: none !important;
-    transition: all 0.3s ease;
-    border: 2px solid #ffffff;
-    display: inline-block;
-  }
-  
-  .login-btn:hover {
-    background: #f2f304;
-    color: #070f2B !important;
-    text-decoration: none !important;
-    transform: translateY(-2px);
-  }
-  
-  .text-administrar {
-    color: #2751c7  !important;
-    transition: color 0.3s ease;
-  }
-  
-  .text-administrar:hover {
-    color: #2751c7 !important;
-  }
-  
-  .text-logout {
-    color: #ff3838  !important;
-    transition: color 0.3s ease;
-  }
-  
-  .text-logout:hover {
-    color: #ff3838 !important;
-  }
+
   .nav-dropdown {
     position: relative;
   }
@@ -318,4 +286,11 @@
   .disabled-item {
     color: #999;
     cursor: not-allowed;
+  }
+  .texto-blanco{
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      display: inline-block;
   }

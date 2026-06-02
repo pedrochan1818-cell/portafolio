@@ -1,0 +1,210 @@
+.btn-float-inicio {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+  
+    width: 60px;
+    height: 60px;
+  
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 0; 
+    
+    background: linear-gradient(135deg, #38bdf8);
+    color: #070f2B;
+    font-size: 26px;
+  
+    box-shadow: 0 8px 20px rgba(7, 238, 255, 0.459);
+    transition: 0.3s;
+    z-index: 2000;
+  }
+  
+  .btn-float-inicio svg {
+    margin: 0;
+    display: block;
+  }
+  .btn-float-inicio:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(7, 238, 255, 0.459);
+  }
+  
+  .whatsapp-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    z-index: 2000;
+  }
+  
+  .whatsapp-mensaje {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    animation: fadeIn 2s ease;
+  }
+  
+  .whatsapp-float {
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  .barra-progreso {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: transparent;
+    z-index: 9999;
+  }
+  
+  .barra-progreso-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #38bdf8);  /*0d6efd*/
+    width: 0%;
+    transition: width 0.2s ease-out;
+  }
+  
+/* ===== OVERLAY ===== */
+.wa-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(7px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: waFadeIn 0.25s ease;
+}
+
+/* ===== CARD ===== */
+.wa-modal-card {
+  width: 92%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+  transform: scale(0.9);
+  animation: waPop 0.25s ease forwards;
+}
+
+/* ===== HEADER ===== */
+.wa-modal-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.wa-modal-header h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #111;
+}
+
+.wa-modal-header p {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.wa-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.wa-input,
+.wa-textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.wa-textarea {
+  min-height: 90px;
+  resize: none;
+}
+
+.wa-input:focus,
+.wa-textarea:focus {
+  border-color: #25d366;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.15);
+}
+
+.wa-btn-send {
+  background: #25d366;
+  color: white;
+  padding: 11px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.wa-btn-send:hover {
+  background: #1ebe5d;
+}
+
+.wa-btn-cancel {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.wa-btn-cancel:hover {
+  background: #f5f5f5;
+}
+
+@keyframes waFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes waPop {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

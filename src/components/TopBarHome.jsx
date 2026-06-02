@@ -6,15 +6,6 @@ const TopBarHome = () => {
   const [mostrarBoton, setMostrarBoton] = useState(false);
   const [mostrarMensaje, setMostrarMensaje] = useState(true);
   const [progreso, setProgreso] = useState(0);
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const [form, setForm] = useState({
-    nombre: "",
-    correo: "",
-    telefono: "",
-    mensaje: "",
-    ubicacion: "",
-  });
 
   /* MENSAJE 5 SEGUNDOS */
   useEffect(() => {
@@ -48,34 +39,13 @@ const TopBarHome = () => {
   /* WHATSAPP (FIJO) */
   const enviarWhatsApp = (e) => {
     e.preventDefault();
-
-    const numero = "529991234567"; // 👈 fijo (cámbialo si quieres)
-
-    const texto = `
-Hola, quiero información.
-
-Nombre: ${form.nombre}
-Teléfono: ${form.telefono}
-Correo: ${form.correo}
-Ubicación: ${form.ubicacion}
-
-Mensaje:
-${form.mensaje}
-`;
-
+  
+    const numero = "529991972791";
+    const texto =   "Hola Pedro, vi tu portafolio y me gustaría conversar sobre una oportunidad laboral.";;
+  
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-
+  
     window.open(url, "_blank");
-
-    setModalOpen(false);
-
-    setForm({
-      nombre: "",
-      correo: "",
-      telefono: "",
-      mensaje: "",
-      ubicacion: "",
-    });
   };
 
   return (
@@ -98,99 +68,16 @@ ${form.mensaje}
       {/* WHATSAPP FLOAT */}
       <div className="whatsapp-container">
         {mostrarMensaje && (
-          <div className="whatsapp-mensaje">¿Te ayudamos?</div>
+          <div className="whatsapp-mensaje">Contáctame por WhatsApp</div>
         )}
 
         <button
           className="whatsapp-float"
-          onClick={() => setModalOpen(true)}
+          onClick={enviarWhatsApp}
         >
           <FaWhatsapp />
         </button>
       </div>
-
-      {/* MODAL */}
-      {modalOpen && (
-        <div
-          className="wa-modal-overlay"
-          onClick={() => setModalOpen(false)}
-        >
-          <div
-            className="wa-modal-card"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="wa-modal-header">
-              <h2>Contacto WhatsApp</h2>
-              <p>Déjanos tus datos</p>
-            </div>
-
-            <form className="wa-modal-form" onSubmit={enviarWhatsApp}>
-              <input
-                className="wa-input"
-                placeholder="Nombre"
-                value={form.nombre}
-                onChange={(e) =>
-                  setForm({ ...form, nombre: e.target.value })
-                }
-                required
-              />
-
-              <input
-                className="wa-input"
-                placeholder="Teléfono"
-                value={form.telefono}
-                onChange={(e) =>
-                  setForm({ ...form, telefono: e.target.value })
-                }
-                required
-              />
-
-              <input
-                className="wa-input"
-                type="email"
-                placeholder="Correo"
-                value={form.correo}
-                onChange={(e) =>
-                  setForm({ ...form, correo: e.target.value })
-                }
-                required
-              />
-
-              <input
-                className="wa-input"
-                placeholder="Ubicación"
-                value={form.ubicacion}
-                onChange={(e) =>
-                  setForm({ ...form, ubicacion: e.target.value })
-                }
-                required
-              />
-
-              <textarea
-                className="wa-textarea"
-                placeholder="Mensaje"
-                value={form.mensaje}
-                onChange={(e) =>
-                  setForm({ ...form, mensaje: e.target.value })
-                }
-                required
-              />
-
-              <button className="wa-btn-send" type="submit">
-                Enviar WhatsApp
-              </button>
-
-              <button
-                type="button"
-                className="wa-btn-cancel"
-                onClick={() => setModalOpen(false)}
-              >
-                Cancelar
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
     </>
   );
 };

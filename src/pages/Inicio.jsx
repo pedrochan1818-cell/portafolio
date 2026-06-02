@@ -6,12 +6,9 @@ import {
   FaPhp
 } from "react-icons/fa";
 
-import {
-  SiMysql,
-  SiJavascript,
-  SiUnity
-} from "react-icons/si";
+import cv from "../assets/cv/CV-2026 PEDRO AKE CHAN.pdf";
 import "../assets/css/inicio.css";
+import foto_cv from "../assets/img/foto_cv.jpeg";
 
 function Inicio() {
   return (
@@ -20,8 +17,9 @@ function Inicio() {
       {/* INICIO */}
       <section className="container-inicio" id="inicio">
         <div className="foto">
-          <h1>Pedro</h1>
-          <p>mi foto</p>
+
+          <img src={foto_cv} alt="Foto de perfil" />
+
         </div>
 
         <div className="presentacion">
@@ -29,9 +27,12 @@ function Inicio() {
           <p className="presentacion-titulo">Hola, soy Pedro Armando Ake Chan</p>
 
           <p className="presentacion-subtitulo">
-            Ingeniero en Entornos Virtuales y Negocios Digitales
+            Desarrollador Web Jr.
           </p>
-
+          
+          {/*<p className="presentacion-subtitulo">
+          Ingeniero en Entornos Virtuales y Negocios Digitales
+          </p>*/}
           <p className="presentacion-texto">
           Ingeniero en Entornos Virtuales y Negocios Digitales
           egresado de la Universidad Tecnológica Metropolitana (UTM),
@@ -46,31 +47,6 @@ function Inicio() {
         </div>
 
      <div className="stack-icons">
-    <div className="icon-card">
-      <SiMysql />
-    </div>
-
-    <div className="icon-card">
-      <SiJavascript />
-    </div>
-
-    <div className="icon-card">
-      <SiUnity />
-    </div>
-
-    <div className="icon-card">
-      <FaPhp />
-    </div>
-
-    <div className="icon-card">
-      <FaDocker />
-    </div>
-
-    <div className="icon-card">
-      <FaGithub />
-    </div>
-
-
     <div className="icon-card">
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
@@ -119,7 +95,7 @@ function Inicio() {
         />
       </div>
 
-      <div className="icon-card">
+      <div className="icon-cardG">
         <img
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
           alt="GitHub"
@@ -138,7 +114,7 @@ function Inicio() {
       <p className="titulo">Sobre mí</p>
 
         <p className="texto-sobre-mi">
-        Soy desarrollador Full Stack desarrollo aplicaciones
+        Soy desarrollador junior tipo Full Stack, desarrollo aplicaciones
          web modernas, sistemas web empresariales
         y experiencias digitales interactivas.
 
@@ -158,6 +134,13 @@ function Inicio() {
         control de versiones con GitHub y despliegue
         de aplicaciones en entornos productivos.
       </p>
+      <a
+      href={cv}
+      download="CV-2026 PEDRO AKE CHAN.pdf"
+      className="btn-cv"
+    >
+      Descargar CV
+    </a>
 </section>
 
 
@@ -274,9 +257,9 @@ function Inicio() {
             </ul>
 
             <div className="botones-proyecto">
-
-              <button>Ver sistema</button>
-
+              <a href="https://yucatansolar.com">
+              <button >Ver sistema</button>
+              </a>
               <button>Galería</button>
 
             </div>
@@ -300,7 +283,7 @@ function Inicio() {
               </span>
               
             <p className="descripcion-proyecto">
-              Plataforma Full Stack para gestión de mesas,
+              Plataforma escolar para gestión de mesas,
               reservas y usuarios en restaurantes.
             </p>
 
@@ -328,8 +311,8 @@ function Inicio() {
             {/* BOTONES */}
             <div className="botones-proyecto">
 
-              <a href="#">
-                <button>Demo</button>
+              <a href="https://eatup-front.vercel.app/home">
+                <button>Ver plataforma</button>
               </a>
 
               <a href="#">
@@ -387,8 +370,9 @@ function Inicio() {
             </ul>
 
             <div className="botones-proyecto">
-
+              <a href="https://web.iesy.edu.mx">
               <button>Ver sitio</button>
+              </a>
 
               <button>Galería</button>
 
@@ -437,9 +421,7 @@ function Inicio() {
 
             <div className="botones-proyecto">
 
-              <button>Gameplay</button>
-
-              <button>Galería</button>
+             {/* <button>Galería</button> */}
 
             </div>
 
@@ -486,12 +468,7 @@ function Inicio() {
           </ul>
 
           <div className="botones-proyecto">
-
-            <button>Demo</button>
-
-            <button>GitHub</button>
-
-            <button>Galería</button>
+      {/* <button>Galería</button> */}
 
           </div>
 
@@ -506,12 +483,14 @@ function Inicio() {
 
       {/* SKILLS */}
       <section className="skills" id="skills">
-        <p className="titulo">Skills</p>
+        <p className="titulo">Habilidades</p>
         <ul>
           <li>React</li>
           <li>Laravel</li>
           <li>PHP</li>
           <li>JavaScript</li>
+          <li>CSS</li>
+          <li>HTML</li>
           <li>Unity 3D</li>
           <li>C#</li>
           <li>MySQL</li>

@@ -51,6 +51,7 @@ const Navbar = () => {
           <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#contacto">Contacto</a></li>
+
         </ul>
       </div>
 
@@ -81,7 +82,7 @@ const Navbar = () => {
               Contacto
             </a>
           </li>
-
+          <li><p className="texto-blanco">pedrochan1818@gmail.com</p></li>
         </ul>
       </div>
     </nav>
