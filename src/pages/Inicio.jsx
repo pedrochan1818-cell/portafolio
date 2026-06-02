@@ -509,8 +509,7 @@ function Inicio() {
         <div className="contacto-texto">
           <p>Teléfono: 99 91 97 27 91</p>
           <p> Correo: pedrochan1818@gmail.com</p>
-          <p>GitHub: github.com/pedro</p>
-          <p>LinkedIn: linkedin.com/in/pedro</p>
+   
         </div>
       </section>
       </div>
