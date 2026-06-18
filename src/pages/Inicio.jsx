@@ -311,7 +311,7 @@ function Inicio() {
             {/* BOTONES */}
             <div className="botones-proyecto">
 
-              <a href="https://front-eatup.vercel.app">
+              <a href="https://front-eatup.vercel.app/home">
                 <button>Ver plataforma</button>
               </a>
 
