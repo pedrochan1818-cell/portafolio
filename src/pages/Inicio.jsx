@@ -243,6 +243,7 @@ function Inicio() {
               <span>Laravel</span>
               <span>MySQL</span>
               <span>Google Maps API</span>
+              <span>Proyecto (Estadía Profesional)</span>
 
             </div>
 
@@ -253,6 +254,7 @@ function Inicio() {
               <li>Responsive Design</li>
               <li>Integración con mapas</li>
               <li>Optimización UX/UI</li>
+              
 
             </ul>
 
@@ -294,6 +296,7 @@ function Inicio() {
               <span>Laravel</span>
               <span>MySQL</span>
               <span>Docker</span>
+              <span>Proyecto Universitario</span>
 
             </div>
 
@@ -314,11 +317,7 @@ function Inicio() {
               <a href="https://front-eatup.vercel.app">
                 <button>Ver plataforma</button>
               </a>
-
-              <a href="#">
-                <button>GitHub</button>
-              </a>
-
+              
               <button>
                 Galería
               </button>
@@ -328,9 +327,6 @@ function Inicio() {
           </div>
 
         </div>
-
-
-       
 
 
         {/* IESY */}
@@ -357,6 +353,7 @@ function Inicio() {
               <span>HTML</span>
               <span>CSS</span>
               <span>JavaScript</span>
+              <span>Proyecto (Estadía Profesional)</span>
 
             </div>
 
