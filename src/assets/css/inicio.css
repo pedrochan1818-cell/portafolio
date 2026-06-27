@@ -3,6 +3,7 @@
   font-family: Arial, Helvetica, sans-serif;
   padding: 80px 10%;
   overflow-x: hidden;
+
 } 
 
 /*.inicio{
@@ -26,7 +27,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 50px;
-
+  margin-top: 20px;
   flex-wrap: wrap;
 }
 
@@ -73,13 +74,13 @@
 .presentacion-titulo{
   font-size: 47px;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .presentacion-subtitulo{
   font-size: 28px;
   color: #38bdf8;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .presentacion-texto{
