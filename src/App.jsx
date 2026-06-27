@@ -5,6 +5,7 @@ import Inicio from './pages/Inicio'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import TopBarHome from './components/TopBarHome'
+import GaleriaEatUp from './pages/GaleriaEatUp'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <Navbar />
     <Routes>
       <Route path="/" element={<Inicio />} />
+      <Route path="/EatUp" element={<GaleriaEatUp />} />
     </Routes>
     <Footer />
     <TopBarHome />
