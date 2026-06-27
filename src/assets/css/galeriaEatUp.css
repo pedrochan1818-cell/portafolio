@@ -1,0 +1,91 @@
+.container-galeria-eatup{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.foto-proyecto{
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.foto-proyecto img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: .4s;
+}
+
+.foto-proyecto:hover img{
+    transform: scale(1.05);
+}
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.65);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.foto-proyecto:hover .overlay{
+    opacity: 1;
+}
+
+.overlay p{
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+/* Tablet */
+@media (max-width: 992px){
+    .container-galeria-eatup{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Celular */
+@media (max-width: 600px){
+    .inicio{
+        padding: 60px 5%;
+    }
+
+    .container-galeria-eatup{
+        grid-template-columns: 1fr;
+    }
+
+    .foto-proyecto img{
+        height: 220px;
+    }
+}
+.modal-body img{
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+}
+.foto-proyecto{
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translateY(40px);
+    animation: aparecer .8s ease forwards;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

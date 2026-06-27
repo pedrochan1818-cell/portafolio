@@ -1,21 +1,30 @@
-import {
-  FaReact,
-  FaLaravel,
-  FaDocker,
-  FaGithub,
-  FaPhp
-} from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 import cv from "../assets/cv/CV-2026 PEDRO AKE CHAN.pdf";
 import "../assets/css/inicio.css";
 import foto_cv from "../assets/img/foto_cv.jpeg";
+import { Link } from "react-router-dom";
 
 function Inicio() {
+  useEffect(() => {
+    AOS.init({
+        duration: 800,
+        once: false,
+        easing: "ease-out",
+    });
+}, []);
+
+
   return (
     <>
 <div className="inicio">
       {/* INICIO */}
-      <section className="container-inicio" id="inicio">
+      <section className="container-inicio" 
+      id="inicio" 
+      data-aos="fade-up"
+      data-aos-delay="100">
         <div className="foto">
 
           <img src={foto_cv} alt="Foto de perfil" />
@@ -101,19 +110,22 @@ function Inicio() {
           alt="GitHub"
         />
       </div>
-
-
-
       </div>
       </section>
 
 
       {/* SOBRE MI */}
-      <section id="sobre-mi">
+      <section id="sobre-mi"   
+       data-aos="fade-up"
+       data-aos-delay="100">
 
       <p className="titulo">Sobre mí</p>
 
-        <p className="texto-sobre-mi">
+       <div> 
+        <p className="texto-sobre-mi"  
+        data-aos="fade-up"
+        data-aos-delay="200">
+
         Soy desarrollador junior tipo Full Stack, desarrollo aplicaciones
          web modernas, sistemas web empresariales
         y experiencias digitales interactivas.
@@ -123,8 +135,13 @@ function Inicio() {
         tecnologías como React, Laravel, MySQL, Docker
         y Unity 3D.
       </p>
+      </div>
 
-      <p className="texto-sobre-mi">
+      <div>
+        <p className="texto-sobre-mi"   
+        data-aos="fade-up"
+        data-aos-delay="300">
+
         He trabajado en proyectos web institucionales,
         plataformas de gestión y sistemas empresariales,
         enfocándome en crear soluciones responsivas,
@@ -134,23 +151,29 @@ function Inicio() {
         control de versiones con GitHub y despliegue
         de aplicaciones en entornos productivos.
       </p>
-      <a
-      href={cv}
-      download="CV-2026 PEDRO AKE CHAN.pdf"
-      className="btn-cv"
-    >
-      Descargar CV
-    </a>
+      </div>
+
+      <div>
+        <a href={cv}
+        download="CV-2026 PEDRO AKE CHAN.pdf"
+        className="btn-cv"   
+        data-aos="fade-up"
+        data-aos-delay="300">
+        Descargar CV</a>   
+      </div>
 </section>
+<br /><br />
 
 
 <section id="tecnologias">
   <p className="titulo">Tecnologías</p>
-      <div className="tecnologias-grid">
-      <div className="tech-card">
+      <div className="tecnologias-grid" >
+      <div className="tech-card" 
+      data-aos="fade-right"
+      data-aos-delay="100">
         <h4>Frontend</h4>
 
-        <div className="tech-badges">
+        <div className="tech-badges" >
           <span>HTML</span>
           <span>CSS</span>
           <span>JavaScript</span>
@@ -159,7 +182,9 @@ function Inicio() {
       </div>
 
 
-      <div className="tech-card">
+      <div className="tech-card"
+        data-aos="fade-left"
+        data-aos-delay="200">
         <h4>Backend</h4>
 
         <div className="tech-badges">
@@ -169,7 +194,9 @@ function Inicio() {
       </div>
 
 
-      <div className="tech-card">
+      <div className="tech-card"
+        data-aos="fade-right"
+        data-aos-delay="300">
         <h4>Videojuegos</h4>
 
         <div className="tech-badges">
@@ -179,7 +206,9 @@ function Inicio() {
       </div>
 
 
-      <div className="tech-card">
+      <div className="tech-card"
+        data-aos="fade-left"
+        data-aos-delay="400">
         <h4>Base de Datos</h4>
 
         <div className="tech-badges">
@@ -188,7 +217,9 @@ function Inicio() {
       </div>
 
 
-      <div className="tech-card">
+      <div className="tech-card"
+        data-aos="fade-right"
+        data-aos-delay="500">
         <h4>Herramientas</h4>
 
         <div className="tech-badges">
@@ -199,7 +230,9 @@ function Inicio() {
       </div>
 
 
-      <div className="tech-card">
+      <div className="tech-card"
+        data-aos="fade-left"
+        data-aos-delay="600">
         <h4>Diseño</h4>
 
         <div className="tech-badges">
@@ -211,7 +244,7 @@ function Inicio() {
       </div>
 
       </section>
-
+<br /><br />
     {/* PROYECTOS */}
       <section className="proyectos" id="proyectos">
 
@@ -219,7 +252,11 @@ function Inicio() {
 
       <div className="contenedor-proyectos">
       {/* YUCATAN SOLAR */}
-      <div className="card-proyecto">
+      <div
+    className="card-proyecto"
+    data-aos="fade-up"
+    data-aos-delay="100"
+>
           <div className="contenido-proyecto">
 
             <div className="top-proyecto">
@@ -260,9 +297,11 @@ function Inicio() {
 
             <div className="botones-proyecto">
               <a href="https://yucatansolar.com">
-              <button >Ver sistema</button>
+              <button className="btn-azul">Ver sistema</button>
               </a>
-              <button>Galería</button>
+              {/* <Link to="/EatUp" className="btn-azul">
+                Galeria
+              </Link>*/}
 
             </div>
 
@@ -271,7 +310,11 @@ function Inicio() {
         </div>
 
         {/* EATUP */}
-        <div className="card-proyecto">
+        <div
+    className="card-proyecto"
+    data-aos="fade-up"
+    data-aos-delay="200"
+>
           <div className="contenido-proyecto">
 
             <div className="top-proyecto">
@@ -315,13 +358,12 @@ function Inicio() {
             <div className="botones-proyecto">
 
               <a href="https://front-eatup.vercel.app">
-                <button>Ver plataforma</button>
+                <button className="btn-azul">Ver plataforma</button>
               </a>
               
-              <button>
+              <Link to="/EatUp" className="btn-azul">
                 Galería
-              </button>
-
+              </Link>
             </div>
 
           </div>
@@ -330,7 +372,11 @@ function Inicio() {
 
 
         {/* IESY */}
-        <div className="card-proyecto">
+        <div
+    className="card-proyecto"
+    data-aos="fade-up"
+    data-aos-delay="300"
+>
           <div className="contenido-proyecto">
 
             <div className="top-proyecto">
@@ -368,10 +414,10 @@ function Inicio() {
 
             <div className="botones-proyecto">
               <a href="https://web.iesy.edu.mx">
-              <button>Ver sitio</button>
+              <button className="btn-azul">Ver sitio</button>
               </a>
 
-              <button>Galería</button>
+              {/*<button className="btn-azul">Galería</button>*/}
 
             </div>
 
@@ -380,7 +426,11 @@ function Inicio() {
         </div>
 
         {/* UNITY */}
-        <div className="card-proyecto">
+        <div
+        className="card-proyecto"
+        data-aos="fade-up"
+        data-aos-delay="400"
+>
 
           <div className="contenido-proyecto">
 
@@ -427,14 +477,14 @@ function Inicio() {
         </div>
 
       {/* LANDING PAGE */}
-      <div className="card-proyecto">
+      <div
+      className="card-proyecto"
+      data-aos="fade-up"
+      data-aos-delay="500">
 
         <div className="contenido-proyecto">
-
           <div className="top-proyecto">
-
             <h3>Landing Page en Laravel</h3>
-
           </div>
 
           <span className="anio">
@@ -476,10 +526,12 @@ function Inicio() {
       </div>
 
       </section>
-
+<br /><br />
 
       {/* SKILLS */}
-      <section className="skills" id="skills">
+      <section className="skills" id="skills" 
+      data-aos="flip-left"
+      data-aos-delay="100">
         <p className="titulo">Habilidades</p>
         <ul>
           <li>React</li>
@@ -497,10 +549,11 @@ function Inicio() {
         </ul>
 
       </section>
-
+<br /><br />
 
       {/* CONTACTO */}
-      <section className="contacto" id="contacto">
+      <section className="contacto" id="contacto" 
+      >
         <p className="titulo">Contacto</p>
 
         <div className="contacto-texto">

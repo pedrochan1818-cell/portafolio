@@ -1,12 +1,23 @@
 .inicio{
-  background: #000;/*c1c59f*/
+  background: #000;
   font-family: Arial, Helvetica, sans-serif;
   padding: 80px 10%;
-}
+} 
 
-/* ========================= */
+/*.inicio{
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 80px 10%;
+    min-height: 100vh;
+}*/
+
 /* INICIO */
-/* ========================= */
+
+/* .inicio{
+  background: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 80px 10%;
+} */
 
 .container-inicio{
   min-height: 100vh;
@@ -177,11 +188,9 @@
 }*/
 
 .contenedor-proyectos{
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
-  gap: 30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
 
 .card-proyecto{
@@ -247,7 +256,7 @@
   color: #94a3b8;
 }
 
-.card-proyecto button{
+.btn-azul{
   padding: 12px 20px;
 
   margin-right: 10px;
@@ -261,11 +270,11 @@
   color: #02111b;
 
   cursor: pointer;
-
+  text-decoration: none;
   transition: 0.3s;
 }
 
-.card-proyecto button:hover{
+.btn-azul:hover{
   transform: scale(1.05);
 }
 
@@ -274,6 +283,7 @@
 /* ========================= */
 
 .skills{
+  
   background: rgba(255,255,255,0.02);
 }
 
@@ -370,6 +380,7 @@ color: #ffffff;
   height: 42px;
   object-fit: contain;
 }
+
 
 /* ========================= */
 /* RESPONSIVE */
